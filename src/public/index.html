@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VirtualTalks</title>    
+    <!--bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <!--custom css-->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <nav class="navbar navbar-light bg-primary">
+        <a href="/" class="navbar-brand mx-auto text-white"><strong>VirtualTalks</strong></a>
+    </nav>
+    <div class="col-md-4 mx-auto mt-5" id="nickWrap">
+        <div class="card">
+            <div class="card-header">
+                <h4>Get a Nick Name!</h4>
+            </div>
+            <p id="nickError"></p>
+            <div class="card-body">
+                <form id="nickForm">
+                    <div class="input-group">
+                        <input type="text" id="nickName" class="form-control" placeholder="MyNickIsCool">
+                        <div class="input-group-append">
+                            <button type="submit" class="btn btn-success form-control">
+                                <i class="fas fa-location-arrow"></i> Get In!
+                            </button>
+                        </div>                       
+                    </div>                    
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id ="contentWrap">
+        <div class="row">
+           <div class="card col-md-6 offset-md-1 mt-4">
+                <div class="card-header">
+                    <h4>Let's Chat "<b id="dUserNick"></b>"</h4>
+                </div>
+                
+                <div id="chat" class="card-body"></div>
+               
+                <form id="message-form" class="card-footer">
+                    <div class="input-group">
+                        <input type="text" id="message" class="form-control">
+                        <div class="input-group-append">                            
+                            <input type="submit" class="btn btn-success form-control" value="Send Message"></input>
+                        </div>
+                    </div>
+                </form>
+           </div> 
+           <div class="col-md-4 mt-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Users</h4>
+                    </div>
+                    <div class="card-body" id="userNames"></div>
+                </div>
+           </div>
+        </div>
+    </div>
+
+
+    <!--JQuery-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <!--sockets-->
+    <script src="socket.io/socket.io.js"></script>
+    <!--custom js-->
+    <script src="js/main.js"></script>
+</body>
+</html>
